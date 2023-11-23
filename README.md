@@ -2,8 +2,7 @@
 
 ### this project use maven dependencies 
 
-go to:
-\ 
+go to: 
 https://start.spring.io/
 
 set dependencies for rabbitmq
