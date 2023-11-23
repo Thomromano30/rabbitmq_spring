@@ -1,0 +1,9 @@
+com\example\RMQ_SPRINGB\consumer\RMQConsumer.class
+com\example\RMQ_SPRINGB\consumer\RMQJsonConsumer.class
+com\example\RMQ_SPRINGB\dto\User.class
+com\example\RMQ_SPRINGB\controller\MSJsonController.class
+com\example\RMQ_SPRINGB\publisher\RMQProducer.class
+com\example\RMQ_SPRINGB\publisher\RMQJsonProducer.class
+com\example\RMQ_SPRINGB\controller\MSController.class
+com\example\RMQ_SPRINGB\RmqSpringbApplication.class
+com\example\RMQ_SPRINGB\config\RabbitMQConfig.class

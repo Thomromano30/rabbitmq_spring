@@ -1,0 +1,41 @@
+## Usa l'immagine di base con OpenJDK 17 su Alpine Linux
+#FROM openjdk:17-alpine
+#
+## Installa git e Maven
+#RUN apk -U add git maven vim && apk -U add gzip
+#
+## Esponi la porta 8080
+#EXPOSE 8080
+#
+## Clona il repository Git
+#RUN git clone <url_del_tuo_repository> /app
+#
+## Imposta il lavoro di lavoro
+#WORKDIR /app
+#
+## Esegui Maven clean package
+#RUN mvn clean package
+#
+## Argomento di build e aggiungi il file JAR all'immagine
+#ARG JAR_FILE=target/RMQ_SPRINGB-0.0.1-SNAPSHOT.jar
+#ADD ${JAR_FILE} /app/app.jar
+#
+## Punto di ingresso per eseguire l'applicazione Java
+#ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+#
+## Crea un punto di mount con un volume chiamato /tmp
+#VOLUME /tmp
+#
+##comando predefinito per avviare l'applicazione
+#CMD ["java", "-jar", "/app/app.jar"]
+
+
+FROM maven:3-openjdk-17-slim AS build
+
+COPY src /home/app/src
+COPY pom.xml /home/app
+RUN mvn -f /home/app/pom.xml clean package
+
+FROM openjdk:17-jdk-slim
+COPY --from=build /home/app/target/Biblioteca-0.0.1-SNAPSHOT.jar /usr/local/lib/biblioteca.jar
+ENTRYPOINT ["java", "-jar", "/usr/local/lib/biblioteca.jar"]

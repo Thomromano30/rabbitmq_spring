@@ -1,0 +1,5 @@
+# Created at 2023-11-21T16:57:35.156
+Boot Manifest-JAR contains absolute paths in classpath 'D:\code lavoro\proggetto synclab\RABBITMQ_SPRING_DOCKER\RMQ_SPRINGB\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

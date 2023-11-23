@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.RMQ_SPRINGB.RmqSpringbApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.315 s - in com.example.RMQ_SPRINGB.RmqSpringbApplicationTests
