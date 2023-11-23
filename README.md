@@ -12,8 +12,10 @@ set dependencies for rabbitmq
     <groupId>org.springframework.amqp</groupId>
     <artifactId>spring-rabbit-test</artifactId>
     <scope>test</scope>
-    </dependency>
+</dependency>
 ```
+
+---
 
 > make configuration 
 
