@@ -31,3 +31,7 @@ rabbitmq.routing.key=routing_key
 rabbitmq.routing.json.key=json_key
 ``` 
 
+create a package for runnig the project on docker container
+\
+`mvn clean package`
+
