@@ -22,7 +22,7 @@ using `application.properties` file
 add the basic configuration for connecting rabbitmq to spring
 \
 add some config for queue, exchange:
-\
+
 ```
 rabbitmq.queue.name=queue_name
 rabbitmq.queue.json.name=json_queue_name
