@@ -14,6 +14,7 @@ set dependencies for rabbitmq
     <scope>test</scope>
 </dependency>
 ```
+---
 
 > make configuration 
 
