@@ -32,8 +32,20 @@ rabbitmq.exchange.name=exchange_name
 rabbitmq.routing.key=routing_key
 rabbitmq.routing.json.key=json_key
 ``` 
+---
+
+## TESTING MESSAGE
 
 create a package for runnig the project on docker container
 \
 `mvn clean package`
+
+for testing message the basic configuration point on:
+\
+for string:
+\
+`https://localhost:8080/api/v1/publish?message=messaggio_di_prova`
+\
+for json:
+`https://localhost:8080/api/v1/publish`
 
