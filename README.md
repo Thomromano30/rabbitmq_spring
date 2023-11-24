@@ -3,7 +3,8 @@ Spring + RabbitMQ project
 To set up the project, go in the main project folder and run
 `docker compose up -d`
 
-### Testing the API
+Testing the API
+---
 
 For testing send:
 
