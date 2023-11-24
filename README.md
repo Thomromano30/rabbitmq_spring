@@ -47,5 +47,6 @@ for string:
 `https://localhost:8080/api/v1/publish?message=messaggio_di_prova`
 \
 for json:
+\
 `https://localhost:8080/api/v1/publish`
 
