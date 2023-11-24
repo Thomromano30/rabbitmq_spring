@@ -1,52 +1,23 @@
-# spring + rabbitmq basic conf
-
-### this project use maven dependencies 
-
-go to: 
-https://start.spring.io/
-
-set dependencies for rabbitmq
-
-```xml 
-<dependency>
-    <groupId>org.springframework.amqp</groupId>
-    <artifactId>spring-rabbit-test</artifactId>
-    <scope>test</scope>
-</dependency>
-```
-
+Spring + RabbitMQ project
 ---
-
-> make configuration 
-
-using `application.properties` file
-\
-add the basic configuration for connecting rabbitmq to spring
-\
-add some config for queue, exchange:
-
-```
-rabbitmq.queue.name=queue_name
-rabbitmq.queue.json.name=json_queue_name
-rabbitmq.exchange.name=exchange_name
-rabbitmq.routing.key=routing_key
-rabbitmq.routing.json.key=json_key
-``` 
----
+To set up the project, go in the main project folder and run
+`docker compose up -d`
 
 ## TESTING MESSAGE
 
-create a package for runnig the project on docker container
-\
-`mvn clean package`
+For testing send:
 
-for testing message the basic configuration point on:
-\
-for string:
-\
-`https://localhost:8080/api/v1/publish?message=messaggio_di_prova`
-\
-for json:
-\
+a **GET** request to:
+`https://localhost:8080/api/v1/publish?message=`{YOUR_MESSAGE}
+
+a **POST** request to:
 `https://localhost:8080/api/v1/publish`
+with the following JSON structure
+```
+{
+    "id": "1",
+    "firstName":"{Your First Name}",
+    "lastName":"{Your Last Name}"
+}
+```
 
