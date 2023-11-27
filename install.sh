@@ -1,18 +1,9 @@
-sudo apt install openjdk-17-jre-headless
-sudo apt install maven
-sudo apt install git
-sudo apt install maven
-#sudo apt install docker.io -y
-#sudo apt install docker-compose -y
-
-#cloning repo
-git clone https://github.com/Thomromano30/rabbitmq_spring
-
-#change directory
-cd ./rabbitmq_spring/RMQ_SPRINGB/
+sudo apt install openjdk-17-jre-headless -y
+sudo apt install maven -y
+sudo apt install docker.io -y
 
 #change application properties
-echo"
+echo "
 logging.level.org.springframework.amqp=DEBUG
 
 #server.servlet.context-path=/app
@@ -36,7 +27,7 @@ rabbitmq.routing.json.key=json_key
 # spring.rabbitmq.connection-timeout=60000
 # spring.rabbitmq.publisher-confirms=true
 # spring.rabbitmq.publisher-returns=true
-" >> ./src/main/resources/application.properties
+" > ./src/main/resources/application.properties
 
 # latest RabbitMQ 3.12
 docker run -d -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-management
@@ -47,12 +38,12 @@ docker run -d -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12
 mvn clean package
 
 #compile jar
-#java -jar ./target/RMQ_SPRINGB-0.0.1-SNAPSHOT.jar
+#java -jar ./target/*.jar
 
 # check Maven build status and run JAR if successful
 if [ $? -eq 0 ]; then
     # Maven build successful, run the JAR
-    java -jar ./target/RMQ_SPRINGB-0.0.1-SNAPSHOT.jar
+    java -jar ./target/*.jar
 else
     # Maven build failed
     echo "Maven build failed. Check the logs for details."
